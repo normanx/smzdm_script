@@ -7,7 +7,7 @@ cron: 20 8 * * *
 
 const Env = require('./env');
 const { SmzdmBot, requestApi, parseJSON, getEnvCookies, wait } = require('./bot');
-const notify = require('./sendNotify');
+// const notify = require('./sendNotify');
 
 // ------------------------------------
 
@@ -193,7 +193,7 @@ class SmzdmLotteryBot extends SmzdmBot {
 
   $.log();
 
-  await notify.sendNotify($.name, notifyContent);
+//  await notify.sendNotify($.name, notifyContent);
 })().catch((e) => {
   $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
 }).finally(() => {
