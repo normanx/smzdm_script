@@ -7,7 +7,7 @@ cron: 20 14 * * *
 
 const Env = require('./env');
 const { SmzdmBot, requestApi, removeTags, getEnvCookies, wait } = require('./bot');
-const notify = require('./sendNotify');
+// const notify = require('./sendNotify');
 
 // ------------------------------------
 
@@ -1582,7 +1582,7 @@ class SmzdmTaskBot extends SmzdmBot {
 
   $.log();
 
-  await notify.sendNotify($.name, notifyContent);
+//  await notify.sendNotify($.name, notifyContent);
 })().catch((e) => {
   $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
 }).finally(() => {
